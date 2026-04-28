@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Төсөл удирдах</title>
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body onload="checkLogin(); renderProjects();">
+
+<div class="admin-layout">
+  <aside class="sidebar">
+  <h2>Admin Panel</h2>
+  <a href="dashboard.html">📊 Dashboard</a>
+  <a href="projects.html">📁 Төсөл</a>
+  <a href="news.html">📰 Мэдээ</a>
+  <a href="../index.html">🌐 Нүүр хуудас</a>
+  <button onclick="logout()">🚪 Гарах</button>
+</aside>
+
+  <main class="content">
+    <div class="panel">
+      <h1>Төсөл удирдах</h1>
+
+      <form class="form-grid" onsubmit="addProject(event)">
+        <input type="text" id="projectName" placeholder="Төслийн нэр" required>
+        <textarea id="projectDesc" rows="4" placeholder="Төслийн тайлбар" required></textarea>
+        <button class="primary-btn" type="submit">Төсөл нэмэх</button>
+      </form>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Төслийн нэр</th>
+            <th>Тайлбар</th>
+            <th>Үйлдэл</th>
+          </tr>
+        </thead>
+        <tbody id="projectTable"></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script src="../js/admin.js"></script>
+</body>
+</html>

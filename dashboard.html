@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body onload="checkLogin(); loadDashboard();">
+
+<div class="admin-layout">
+  <aside class="sidebar">
+  <h2>Admin Panel</h2>
+  <a href="dashboard.html">📊 Dashboard</a>
+  <a href="projects.html">📁 Төсөл</a>
+  <a href="news.html">📰 Мэдээ</a>
+  <a href="../index.html">🌐 Нүүр хуудас</a>
+  <button onclick="logout()">🚪 Гарах</button>
+</aside>
+
+  <main class="content">
+    <div class="top-card">
+      <h1>Админ самбар</h1>
+      <p>Эндээс нүүр хуудсан дээр харагдах төслүүд болон мэдээгээ удирдана.</p>
+
+      <div class="stats">
+        <div class="stat-card">
+          <h3 id="projectCount">0</h3>
+          <p>Нийт төсөл</p>
+        </div>
+        <div class="stat-card">
+          <h3 id="newsCount">0</h3>
+          <p>Нийт мэдээ</p>
+        </div>
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Frontend ажиллаж байна</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="../js/admin.js"></script>
+</body>
+</html>

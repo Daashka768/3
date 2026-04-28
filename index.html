@@ -3,73 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daashka Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Админ нэвтрэх</title>
+  <link rel="stylesheet" href="../css/admin.css">
 </head>
-<body>
+<body class="login-page">
 
-<nav class="navbar">
-  <div class="logo">DAASHKA<span>.</span></div>
-  <div class="nav-links">
-    <a href="#home">Нүүр</a>
-    <a href="#skills">Ур чадвар</a>
-    <a href="#projects">Төслүүд</a>
-    <a href="#contact">Холбоо барих</a>
-    <a class="admin-btn" href="admin/index.html">Админ</a>
-  </div>
-</nav>
+<div class="login-card">
+  <h2>Админ нэвтрэх</h2>
+  <p>Төслүүд болон мэдээг удирдах хэсэг</p>
 
-<section class="hero" id="home">
-  <div class="hero-text">
-    <p class="badge">Portfolio Website</p>
-    <h1>Сайн уу! Би <span>Daashka</span></h1>
-    <p class="hero-desc">
-      Веб хөгжүүлэлт, системийн тохиргоо, төслийн танилцуулга хийх сонирхолтой оюутан.
-      Энэхүү веб нь миний ур чадвар болон бүтээсэн төслүүдийг харуулна.
-    </p>
-    <div class="hero-actions">
-      <a href="#projects">Төслүүд харах</a>
-      <a class="outline" href="admin/index.html">Админ нэвтрэх</a>
-    </div>
-  </div>
-  <div class="hero-card">
-    <h3>Student Developer</h3>
-    <p>HTML • CSS • JavaScript • PHP • GitHub • Vercel</p>
-  </div>
-</section>
-
-<section class="skills" id="skills">
-  <h2>Миний ур чадвар</h2>
-  <div class="skill-grid">
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">PHP</div>
-    <div class="skill">MySQL</div>
-    <div class="skill">GitHub</div>
-  </div>
-</section>
-
-<section class="projects" id="projects">
-  <h2>Бүтээсэн төслүүд</h2>
-  <p class="section-desc">Админ хэсгээс нэмсэн төслүүд энд автоматаар харагдана.</p>
-  <div class="project-grid" id="projectList"></div>
-</section>
-
-<section class="contact" id="contact">
-  <h2>Холбоо барих</h2>
-  <form onsubmit="submitForm(event)">
-    <input type="text" id="name" placeholder="Таны нэр" required>
-    <input type="email" id="email" placeholder="И-мэйл хаяг" required>
-    <textarea id="message" placeholder="Мессеж бичих" rows="4"></textarea>
-    <button type="submit">Илгээх</button>
+  <form onsubmit="loginAdmin(event)">
+    <input type="text" id="username" placeholder="Нэвтрэх нэр" required>
+    <input type="password" id="password" placeholder="Нууц үг" required>
+    <button type="submit">Нэвтрэх</button>
   </form>
-</section>
 
-<footer>
-  © 2026 Daashka Portfolio | <a href="admin/index.html">Admin Panel</a>
-</footer>
+  <p class="error" id="error"></p>
+  <p style="font-size:13px;margin-top:18px;">Username: admin<br>Password: admin123</p>
+</div>
 
-<script src="js/main.js"></script>
+<script src="../js/admin.js"></script>
 </body>
 </html>
